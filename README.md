@@ -59,4 +59,22 @@ Question 7.
 Aim:-we have to find the horizontal range. 
 Working :-
 so we have to create a function named `range` having two arguments: `speed` and `angle`. Similarly in the previous question we had created a variable named `radian` in which we convert the angle from degree to radian. Then we calculate the maximum range by a projectile using the range formula used in the projectile motion then we call the function with an argument in the main function. 
- 
+
+Question 8 
+Aim:-in this program, we have to shift all the zeros to the last of an array. 
+Working :-
+we first create a function shiftZero in which we give a parameter int arr and int n. 
+In this function, we use `non-zero count` as a variable, which is initiated from zero, then we use a for loop in which we use an if statement arr[i]!=0. Now in this block we use arr[nonZeroCount++]=arr[i];
+then we use another for loop which is starting from a non-zero count and goes to i < n.
+ At last, we call the function shiftZero in the main function. Then we use a for loop for printing an array. 
+
+Question 9.
+AIM :-finding first duplicate element in array .
+ Working :-
+ we at first created a function named `createArray`, in which we use a `for` loop for entering an array. 
+ Then we create another function whose name is findDuplicate, and we give two parameters: array and int n. 
+ In this function, we created two loops:
+1. First Loop is starting from i to n.
+2. Inside that loop, we created another loop which is j =  i+1, j < n.
+3. Inside the second loop, we created an if statement in which we compared the element arr[i] == arr[j]. From this operation, we can find the duplicate number, and then we use the break statement for outer loop .
+4. Then we call the function findDuplicate in the main function by passing the array and int n. 
