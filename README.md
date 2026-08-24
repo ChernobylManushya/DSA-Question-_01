@@ -256,3 +256,26 @@ Question 10 — Singly Linked List Operations (`10.cpp`)
 
 **Note:** The `getMax` function returns during its first loop iteration, so it usually returns the first node's value rather than the real maximum. This may cause the program to stop after too few digit passes and leave the list not fully sorted. The method name is also written as `redixSort` in the code.
 
+Question 24 — Bucket Sort (`24.cpp`)
+
+**Aim:** To sort an array by using bucket sort and linked lists.
+
+**Working:** We first create a `Node` class and a `LinkedList` class. The `push` function inserts values into a linked-list bucket. In the `bucketSort` function, we first find the maximum value in the array. Then we create ten buckets. For every array element, we calculate its bucket index by using `(arr[i] * 10) / (max + 1)` and put the value into that bucket. After that, we call the `sort` function for every bucket. This function compares the values inside a linked list and swaps their data when needed. Finally, we visit all ten buckets from first to last and copy their values back to the original array.
+
+**Time Complexity:** Finding the maximum and placing values into buckets takes **O(n)**. Sorting the buckets is **O(Σ bᵢ²)**, where `bᵢ` is the number of elements in one bucket. In the worst case, all values go into one bucket, so the overall time complexity is **O(n²)**.
+
+**Space Complexity:** **O(n + 10)**, which is **O(n)**, because linked-list nodes are created for the values and ten buckets are used.
+
+**Note:** This program is designed for non-negative integer values. It uses exactly ten buckets.
+
+## Question 25 — Bin Sort (`25.cpp`)
+
+**Aim:** To sort an array by using bin sort and linked lists.
+
+**Working:** We first create a `Node` class and a `LinkedList` class. In the `binSort` function, we find the maximum value from the array. Then we create `max + 1` bins, where every bin is a linked list. We use the array value itself as the bin index. For example, all values equal to `2` are stored in `bin[2]`. At the end, we visit all bins from `0` to `max` and copy their values back into the array. In this way, the final array becomes sorted.
+
+**Time Complexity:** **O(n + max)**, where `n` is the number of elements and `max` is the largest array value.
+
+**Space Complexity:** **O(n + max)** because the program creates linked-list nodes and `max + 1` bins.
+
+**Note:** This program works for non-negative integer values. It can use a large amount of memory when the maximum value is much larger than the number of elements.
