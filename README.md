@@ -1,83 +1,104 @@
-Question 1.
-Aim:- If a ball is dropped from height h then after how many tips the ball will stops and speed will become half after every tips.
-Working:-
-We had created function name noOfTips which take speed as input and there is the count which count the no. of tips done by ball before stoping .
-then we call the noOFTips in main function speed as an argument.
+Question 1 — Number of Ball Tips
 
+**Aim:** If a ball is dropped from height `h`, find after how many tips the ball stops when its speed becomes half after every tip.
 
-Question 2.
-Aim:- Finding the roots of Quadratic Equation .
-Working:-
-We had created function name findRoots which 3 coefficient as input --> then we had created a variable 'd' which calculate the discriminant of quadratic equation--> then we had 2 variable named root1 and root2 for calculating the roots of the quadratic equation --->we had used conditional statement for 3 cases of the quadratic equation:-
-1. when d=0 --> both roots are real and same ,
-2. when d>0 --> both roots are real and distinct ,
-3. when d<0 --> roots are imaginary.
-then we call the function findRoots with argument in main function. 
+**Working:** We create a function named `noOfTips` which takes speed as input. Inside the function, we use a count variable to count how many tips are done before the ball stops. In every step, the speed becomes half. At the end, we call the `noOfTips` function in the main function by passing speed as an argument.
 
+**Time Complexity:** **O(log s)**, where `s` is the initial speed, because the speed becomes half in every step.
 
-Question 3. 
-Aim:-There is unsorted array in which have to apply methods like 
-1. Insertion in the beginning .
-2. Insertion in middle.
-3. Insertion in last.
-4. Delete an element from an array.
-Working:-we have created a function named unsortedADT in which we take input n --> Then we use a for loop for input element in array by the user --> Use for loop again for printing the array. --> Created three variables: new element, choice , and position. -->In the menu we give four options:
-1. Insertion at the beginning
-2. Insertion in the middle
-3. Insertion at the end
-4. Deleting an element from the array
-we input the option through the user. We use the switch case for inserting elements in the beginning, in the middle, and at the end.
-In first case We use a for loop for inserting an element in the beginning and we use the logic of insertion in this logic we push the each elements push back and increase the size of the array for inserting a new element at the beginning of the array.
-In the second case we use a for loop again for inserting an element in the middle and use the logic of inserting an element in the middle of an array. And in this logic we use a variable name position, which was given by the user. The user gives the position where the element has to be inserted. After that we use the logic of inserting elements.
-Third case: we use the for loop again for inserting an element at the last. Then we insert the element at the last and increase the size of an array.
-In case four we again use a for loop for deleting an element. In this case we use a logic in which we first search the position of that element and then we apply a loop for removing that element from an array. For searching we use linear search.
- At the final we call the function with an arguments in main function.
+**Space Complexity:** **O(1)** because only a few variables are used.
 
-Question 4.
-Aim:- we have to find the time of flight. 
-Working:-
-here we use a cmath library in C++ For calculation of mathematical operation.
- Now we have created a function name: time of flight, having two arguments:
-1. speed
-2. angle
- in the function we first take a variable name radian in which we convert the angle from degree to  radian.
- Now we calculate the time of flight by using the formula used in projectile motion. 
- At last we call the function in main function with arguments.
+## Question 2 — Roots of a Quadratic Equation
 
-Question 5.
- Aim:- we have to find the maximum height attain by a projectile.
- Working :-
- we create a function Hmax having two arguments:
-1. speed
-2. angle
-similarly as in the previous question, we:
-1. Create a variable named radian in which we convert the angle from degrees to radians.
-2. We calculate the maximum height obtained by a projectile using the formula used in the projectile motion.
-3. We call the function to main function with arguments.
+**Aim:** To find the roots of a quadratic equation.
 
-Question 7.
-Aim:-we have to find the horizontal range. 
-Working :-
-so we have to create a function named `range` having two arguments: `speed` and `angle`. Similarly in the previous question we had created a variable named `radian` in which we convert the angle from degree to radian. Then we calculate the maximum range by a projectile using the range formula used in the projectile motion then we call the function with an argument in the main function. 
+**Working:** We create a function named `findRoots` which takes three coefficients as input. Then we create a variable `d` to calculate the discriminant of the quadratic equation. We use two variables named `root1` and `root2` for calculating the roots. We use conditional statements for three cases:
 
-Question 8 
-Aim:-in this program, we have to shift all the zeros to the last of an array. 
-Working :-
-we first create a function shiftZero in which we give a parameter int arr and int n. 
-In this function, we use `non-zero count` as a variable, which is initiated from zero, then we use a for loop in which we use an if statement arr[i]!=0. Now in this block we use arr[nonZeroCount++]=arr[i];
-then we use another for loop which is starting from a non-zero count and goes to i < n.
- At last, we call the function shiftZero in the main function. Then we use a for loop for printing an array. 
+1. When `d = 0`, both roots are real and same.
+2. When `d > 0`, both roots are real and distinct.
+3. When `d < 0`, the roots are imaginary.
 
-Question 9.
-AIM :-finding first duplicate element in array .
- Working :-
- we at first created a function named `createArray`, in which we use a `for` loop for entering an array. 
- Then we create another function whose name is findDuplicate, and we give two parameters: array and int n. 
- In this function, we created two loops:
-1. First Loop is starting from i to n.
-2. Inside that loop, we created another loop which is j =  i+1, j < n.
-3. Inside the second loop, we created an if statement in which we compared the element arr[i] == arr[j]. From this operation, we can find the duplicate number, and then we use the break statement for outer loop .
-4. Then we call the function findDuplicate in the main function by passing the array and int n.
+At the end, we call the `findRoots` function with arguments in the main function.
+
+**Time Complexity:** **O(1)** because a fixed number of calculations and conditions are used.
+
+**Space Complexity:** **O(1)** because only a fixed number of variables are used.
+
+## Question 3 — Unsorted Array ADT Operations
+
+**Aim:** To perform operations on an unsorted array:
+
+1. Insertion at the beginning.
+2. Insertion in the middle.
+3. Insertion at the last.
+4. Deleting an element from the array.
+
+**Working:** We create a function named `unsortedADT` in which we take input `n`. Then we use a `for` loop to take array elements from the user and another loop to print the array. We create variables for the new element, choice, and position. In the menu, we give four options for insertion at the beginning, middle, and end, and for deletion. We take the choice from the user and use a switch case. For insertion at the beginning and middle, we shift elements to make space for the new element. For insertion at the end, we add the element at the last position and increase the size. For deletion, we first search the required element by linear search and then shift elements to remove it. At the end, we call the function from the main function.
+
+**Time Complexity:** Insertion at the beginning, middle, and deletion are **O(n)** because elements may be shifted. Insertion at the end is **O(1)** when there is free space.
+
+**Space Complexity:** **O(n)** for the array.
+
+## Question 4 — Time of Flight of a Projectile
+
+**Aim:** To find the time of flight of a projectile.
+
+**Working:** We use the `cmath` library in C++ for mathematical calculations. We create a function named `timeOfFlight` with two arguments: speed and angle. Inside the function, we create a variable named `radian` to convert the angle from degree to radian. Then we calculate the time of flight by using the projectile-motion formula. At last, we call the function in the main function with arguments.
+
+**Time Complexity:** **O(1)** because the function uses only fixed calculations.
+
+**Space Complexity:** **O(1)** because it uses only a fixed number of variables.
+
+## Question 5 — Maximum Height of a Projectile
+
+**Aim:** To find the maximum height attained by a projectile.
+
+**Working:** We create a function named `Hmax` with two arguments: speed and angle. We create a variable named `radian` to convert the angle from degrees to radians. Then we calculate the maximum height obtained by the projectile by using the projectile-motion formula. At last, we call the function in the main function with arguments.
+
+**Time Complexity:** **O(1)** because only fixed calculations are performed.
+
+**Space Complexity:** **O(1)** because only a fixed number of variables are used.
+
+## Question 6
+
+**Aim:** The program details were not provided.
+
+**Working:** No code or explanation for Question 6 was included, so this section is kept empty instead of adding incorrect information.
+
+**Time Complexity:** Not available.
+
+**Space Complexity:** Not available.
+
+## Question 7 — Horizontal Range of a Projectile
+
+**Aim:** To find the horizontal range of a projectile.
+
+**Working:** We create a function named `range` with two arguments: speed and angle. We create a variable named `radian` to convert the angle from degree to radian. Then we calculate the horizontal range by using the range formula of projectile motion. At the end, we call the function with arguments in the main function.
+
+**Time Complexity:** **O(1)** because only fixed calculations are used.
+
+**Space Complexity:** **O(1)** because only a fixed number of variables are used.
+
+## Question 8 — Shift Zeros to the End of an Array
+
+**Aim:** To shift all zeros to the end of an array.
+
+**Working:** We create a function named `shiftZero` which takes an integer array and `n` as parameters. In this function, we create a variable named `nonZeroCount` and initialize it with zero. We use a `for` loop and check `arr[i] != 0`. When an element is not zero, we put it at `arr[nonZeroCount++]`. Then we use another loop starting from `nonZeroCount` and fill the remaining positions with zeros. At last, we call the `shiftZero` function in the main function and use a loop to print the array.
+
+**Time Complexity:** **O(n)** because the array is traversed using loops.
+
+**Space Complexity:** **O(1)** because the array is changed in place.
+
+## Question 9 — First Duplicate Element in an Array
+
+**Aim:** To find the first duplicate element in an array.
+
+**Working:** First, we create a function named `createArray` and use a `for` loop to enter the array elements. Then we create another function named `findDuplicate` with array and integer `n` as parameters. In this function, we use two loops. The first loop starts from `i` and goes up to `n`. The second loop starts from `j = i + 1` and goes up to `n`. Inside the second loop, we compare `arr[i] == arr[j]`. When both elements are equal, we find the duplicate number and use a break statement for the outer loop. At last, we call `findDuplicate` in the main function by passing the array and `n`.
+
+**Time Complexity:** **O(n²)** in the worst case because two nested loops are used.
+
+**Space Complexity:** **O(1)** extra space.
+
 
 Question 10 — Singly Linked List Operations (`10.cpp`)
 
