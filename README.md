@@ -100,7 +100,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Space Complexity:** **O(1)** extra space.
 
 
-**Question 10 — Singly Linked List Operations (`10.cpp`)
+##Question 10 — Singly Linked List Operations (`10.cpp`)
 
 **Aim:** To implement different operations on a singly linked list, such as inserting, deleting, searching, and printing elements.
 
