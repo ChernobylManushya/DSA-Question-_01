@@ -3,95 +3,72 @@
 #include <iostream>
 using namespace std;
 
-class Node
-{
+class Node{
 public:
     int data;
     Node* next;
-
-    Node(int value)
-    {
+    Node(int value){
         data = value;
         next = NULL;
     }
 };
 
-class LinkedList
-{
+class LinkedList{
 public:
     Node* head;
     Node* tail;
 
-    LinkedList()
-    {
+    LinkedList(){
         head = tail = NULL;
     }
 
-    void push(int value)
-    {
+    void push(int value){
         Node* newNode = new Node(value);
 
-        if (head == NULL)
-        {
+        if (head == NULL){
             head = tail = newNode;
         }
-        else
-        {
+        else{
             newNode->next = head;
             head = newNode;
         }
     }
 };
 
-void binSort(int arr[], int n)
-{
+void binSort(int arr[], int n){
     // Find maximum value
     int max = arr[0];
 
-    for (int i = 1; i < n; i++)
-    {
+    for (int i = 1; i < n; i++){
         if (arr[i] > max)
             max = arr[i];
     }
-
     // Create bins
     LinkedList bin[max + 1];
-
     // Put elements into bins
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         bin[arr[i]].push(arr[i]);
     }
 
     // Combine bins
     int index = 0;
 
-    for (int i = 0; i <= max; i++)
-    {
+    for (int i = 0; i <= max; i++){
         Node* temp = bin[i].head;
-
-        while (temp != NULL)
-        {
+        while (temp != NULL){
             arr[index] = temp->data;
             index++;
-
             temp = temp->next;
         }
     }
 }
 
-int main()
-{
+int main(){
     int arr[] = {4, 2, 3, 1, 2, 4, 0};
-
     int n = 7;
-
     binSort(arr, n);
-
     cout << "Sorted array: ";
-
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
 
