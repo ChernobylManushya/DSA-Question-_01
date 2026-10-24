@@ -1,4 +1,4 @@
-Question 1 — Number of Ball Tips
+## Question 1 — Number of Ball Tips
 
 **Aim:** If a ball is dropped from height `h`, find after how many tips the ball stops when its speed becomes half after every tip.
 
