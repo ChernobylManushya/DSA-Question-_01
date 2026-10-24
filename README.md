@@ -100,7 +100,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Space Complexity:** **O(1)** extra space.
 
 
-## Question 10 — Singly Linked List Operations (`10.cpp`)
+## Question 10 — Singly Linked List Operations 
 
 **Aim:** To implement different operations on a singly linked list, such as inserting, deleting, searching, and printing elements.
 
@@ -112,7 +112,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** Most menu choices start with an empty list, so operations such as insert, delete, or search need existing nodes first. Also, the search result is not printed and case 6 has no `break`, so it falls into case 7. `pop_back` does not safely handle a one-node list, and `deleteElement` treats its input as part of a position calculation rather than searching for that value.
 
-## Question 11 — Stack Using a Linked List (`11.cpp`)
+## Question 11 — Stack Using a Linked List
 
 **Aim:** To implement a stack by using a singly linked list.
 
@@ -124,7 +124,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** `pop_back` does not handle a stack with exactly one node, because it tries to find a node before the head.
 
-## Question 12 — Queue Using a Linked List (`12.cpp`)
+## Question 12 — Queue Using a Linked List
 
 **Aim:** To implement a queue by using a singly linked list.
 
@@ -136,7 +136,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** `pop_front` does not check whether the queue is empty and does not update `tail` when the last node is removed. The displayed example has enough nodes, so it works for that one removal.
 
-## Question 13 — Stack Using an Array (`13.cpp`)
+## Question 13 — Stack Using an Array
 
 **Aim:** To implement basic stack operations using an array.
 
@@ -148,7 +148,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** The array has length 5, but pushing a sixth element writes outside the array. Also, `pop_back` writes to `arr[n]` before reducing `n`, which is also outside the valid last index when the size is 5.
 
-## Question 14 — Queue Using an Array (`14.cpp`)
+## Question 14 — Queue Using an Array 
 
 **Aim:** To implement basic queue operations using an array. The program can insert an element at the back and remove an element from the front.
 
@@ -160,7 +160,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** The array is declared with size 5, but inserting one more value writes outside that array. A larger array or capacity check is needed for safe insertion.
 
-## Question 15 — Merge Two Sorted Arrays (`15.cpp`)
+## Question 15 — Merge Two Sorted Arrays 
 
 **Aim:** To merge two sorted arrays into one sorted array.
 
@@ -172,7 +172,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** Both input arrays must already be sorted. Also, the remaining-element loops use `n * 2` as their end limit even though each input array has only `n` elements, so the code can read outside an input array. Those loop limits should end at `n`.
 
-## Question 16 — Merge Sort Using an Array (`16.cpp`)
+## Question 16 — Merge Sort Using an Array 
 
 **Aim:** To sort ten array elements by using the merge sort algorithm.
 
@@ -182,7 +182,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Space Complexity:** **O(n)** for the temporary merged array. The program uses an array of size 10 for this purpose.
 
-## Question 17 — Merge Sort Using a Linked List (`17.cpp`)
+## Question 17 — Merge Sort Using a Linked List 
 
 **Aim:** To sort a singly linked list using merge sort.
 
@@ -192,7 +192,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Space Complexity:** The recursion uses **O(log n)** call-stack space. In this particular code, `merge` creates new nodes instead of reconnecting the old nodes, and the old nodes are not freed; across the whole run this can allocate **O(n log n)** node storage.
 
-## Question 18 — Circular Queue (`18.cpp`)
+## Question 18 — Circular Queue 
 
 **Aim:** To implement a circular queue using an array.
 
@@ -202,7 +202,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Space Complexity:** **O(capacity)** for the queue array.
 
-## Question 19 — Doubly Linked List Operations (`19.cpp`)
+## Question 19 — Doubly Linked List Operations 
 
 **Aim:** To perform insertion and deletion operations in a doubly linked list.
 
@@ -214,7 +214,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Note:** In `push_front`, the old head's `prev` pointer is set to `NULL` instead of being linked to the new node. The list prints correctly in the forward direction, but its backward links are not maintained correctly for values added this way.
 
-## Question 20 — Queue Using a Doubly Linked List (`20.cpp`)
+## Question 20 — Queue Using a Doubly Linked List 
 
 **Aim:** To implement a queue using a doubly linked list.
 
@@ -224,7 +224,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Space Complexity:** **O(n)** for the linked-list nodes.
 
-## Question 21 — Stack Using a Doubly Linked List (`21.cpp`)
+## Question 21 — Stack Using a Doubly Linked List 
 
 **Aim:** To implement a stack using a doubly linked list.
 
@@ -244,7 +244,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Space Complexity:** **O(n)** recursion-stack space; as written, the depth is fixed at 4.
 
-## Question 23 — Radix Sort Using Linked-List Buckets (`23.cpp`)
+## Question 23 — Radix Sort Using Linked-List Buckets 
 
 **Aim:** To sort non-negative integer values using radix sort and ten linked-list buckets.
 
@@ -268,7 +268,7 @@ Question 24 — Bucket Sort (`24.cpp`)
 
 **Note:** This program is designed for non-negative integer values. It uses exactly ten buckets.
 
-## Question 25 — Bin Sort (`25.cpp`)
+## Question 25 — Bin Sort 
 
 **Aim:** To sort an array by using bin sort and linked lists.
 
