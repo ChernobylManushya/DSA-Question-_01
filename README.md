@@ -449,3 +449,107 @@ than array-based heap sort because finding the last node and maintaining the
 complete-tree structure require extra pointer or traversal logic. For a heap
 with `n` nodes, heapify work is `O(n)` when every node is processed once, while
 individual downward heapify operations take `O(log n)` in a balanced tree.
+---
+
+# Detailed Explanation: Unsorted Array ADT
+
+Source file: [`AbstactDatatype.cpp`](AbstactDatatype.cpp)
+
+> The filename uses `Abstact` instead of `Abstract`; the code demonstrates an abstract-data-type style interface for an unsorted array.
+
+## Purpose
+
+This program demonstrates how common array operations can be organized behind a menu-driven interface. The array is considered **unsorted**, so insertion does not preserve any ordering. The program supports:
+
+1. Inserting an element at the beginning.
+2. Inserting an element at a specified position in the middle.
+3. Inserting an element at the end.
+4. Deleting the first occurrence of a value.
+
+The function `unsortedADT(int n)` owns the array, reads its initial values, displays the available operations, performs the selected operation, and prints the resulting array.
+
+## Program flow
+
+1. `main()` calls `unsortedADT(5)`, so the initial array contains five values.
+2. The user enters the five array elements.
+3. The original array is printed.
+4. A menu is displayed and the user enters one choice from `1` to `4`.
+5. The selected `switch` case modifies the array and prints the updated contents.
+
+The position used by the insertion logic is **zero-based**. For example, position `0` means the first element, while position `2` means the third element.
+
+## Insertion at the beginning
+
+For choice `1`, the loop moves every existing element one position to the right, starting from the last active element. The new value is then stored at `arr[0]` and `n` is increased by one.
+
+Example:
+
+```text
+Before:  10 20 30
+Insert:  5
+After:   5 10 20 30
+```
+
+Because as many as `n` elements may be moved, the time complexity is **O(n)**.
+
+## Insertion at a position
+
+For choice `2`, the user provides a position `pos`. Elements from that position onward are shifted right by one place. The new value is stored at `arr[pos]`, and the active size is increased.
+
+Example when `pos = 2`:
+
+```text
+Before:  10 20 40 50
+Insert:  30
+After:   10 20 30 40 50
+```
+
+The worst-case time complexity is **O(n)**, because inserting near the beginning requires shifting most of the array. The operation needs **O(1)** auxiliary space.
+
+## Insertion at the end
+
+For choice `3`, the new value is written at `arr[n]`, after the current last element, and `n` is incremented. Conceptually this is **O(1)** because no existing values need to move.
+
+However, the current program creates `int arr[n]`, which has exactly `n` positions. Therefore `arr[n]` is outside the valid range `arr[0]` through `arr[n - 1]`. The same capacity problem also affects choices `1` and `2`, because they write one additional element before increasing `n`.
+
+## Deleting an element
+
+For choice `4`, the input is treated as a value rather than an index. The program performs a linear search and stores the index of the first matching value in `pos`.
+
+- If no match is found, it prints `Element not found`.
+- If a match is found, every later element is shifted one position left.
+- The active size `n` is decreased by one.
+
+Example:
+
+```text
+Before:  10 20 30 20 40
+Delete:  20
+After:   10 30 20 40
+```
+
+Only the first occurrence is deleted. Searching takes **O(n)**, and shifting can also take **O(n)**, so the overall worst-case time complexity is **O(n)**. The deletion uses **O(1)** auxiliary space.
+
+## Complexity summary
+
+| Operation | Time complexity | Extra space | Main action |
+| --- | ---: | ---: | --- |
+| Insert at beginning | O(n) | O(1) | Shift all active elements right |
+| Insert at position | O(n) | O(1) | Shift elements from `pos` right |
+| Insert at end | O(1) conceptually | O(1) | Write at the next free position |
+| Delete first matching value | O(n) | O(1) | Search, then shift elements left |
+
+The array itself requires **O(n)** storage for its active elements.
+
+## Important limitations in the current implementation
+
+- `int arr[n]` is a variable-length array. Variable-length arrays are not part of standard C++; some compilers accept them as an extension, but portable C++ should use a fixed-size array or `std::vector<int>`.
+- The array has no spare capacity. Any insertion writes beyond the allocated array, causing undefined behavior.
+- The program does not validate that `pos` is within the valid insertion range `0` through `n`.
+- The program does not validate the menu choice or input failures.
+- The function performs only one selected operation and then returns; it is not a repeating interactive menu.
+- Because the array is unsorted, deletion must search linearly. A sorted array could support faster searches, but insertion would still require shifting and preserving order.
+
+## Safer design direction
+
+For a production-quality version, use `std::vector<int>` and check capacity and position before modifying it. `vector::insert` and `vector::erase` express the same operations clearly, while still demonstrating the same underlying shifting costs. If the goal is to practice manual array manipulation, keep the loops but allocate a fixed capacity larger than the initial size and track both `size` and `capacity` separately.
