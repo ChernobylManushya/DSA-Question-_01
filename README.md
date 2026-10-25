@@ -344,25 +344,6 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## AVL Tree Implementation ([`avl.cpp`](avl.cpp))
-
-**Aim:** To implement a self-balancing binary search tree (AVL Tree) supporting node insertion and rotations (LL, RR, LR, RL).
-
-**Working:** On each recursive insertion, the node height is updated and the balance factor ($BF = \text{height}(left) - \text{height}(right)$) is checked. If $|BF| > 1$, the tree applies appropriate single or double rotations (left or right) to maintain $O(\log n)$ balance.
-
-**Time Complexity:** **O(log n)** for search, insertion, and tree balancing.
-
-**Space Complexity:** **O(log n)** call-stack space during recursion.
-
----
-
-## Practice Files
-
-- [`practice.cpp`](practice.cpp): Scratchpad for assorted data structure implementations and algorithm tests.
-- [`practice2.cpp`](practice2.cpp): Extended problem collection including sorting algorithms and linked list experiments.
-
----
-
 # Trees and Heap Sort Implementations
 
 This section summarizes the tree and heap-sort programs in this repository.
