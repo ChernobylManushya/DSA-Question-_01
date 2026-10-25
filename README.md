@@ -132,35 +132,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 11 — Stack Using a Linked List ([`StackLL.cpp`](StackLL.cpp))
-
-**Aim:** To implement a stack by using a singly linked list.
-
-**Working:** We create nodes with data and a next pointer. The `push_back` function adds each new value at the tail of the linked list, which works as the top of the stack. The `pop_back` function travels through the list to find the node before the tail, removes the old tail, and updates the tail pointer. The main function pushes five values, prints the stack, removes the top value, and prints the stack again.
-
-**Time Complexity:** `push_back` is **O(1)** because the tail pointer is available. `pop_back` is **O(n)** because it must move from the head to the node before the tail. Printing is **O(n)**.
-
-**Space Complexity:** **O(n)** for the nodes in the stack.
-
-**Note:** `pop_back` does not handle a stack with exactly one node, because it tries to find a node before the head.
-
----
-
-## Question 12 — Queue Using a Linked List ([`QueueLL.cpp`](QueueLL.cpp))
-
-**Aim:** To implement a queue by using a singly linked list.
-
-**Working:** We create a queue class with head and tail pointers. The `push_back` function adds a new node at the tail, which is the rear of the queue. The `pop_front` function removes the node from the head, which is the front of the queue. Therefore, the first value inserted is the first value removed. The main function inserts five values, prints the queue, removes one value from the front, and prints the queue again.
-
-**Time Complexity:** Both `push_back` and `pop_front` are **O(1)**. Printing is **O(n)**.
-
-**Space Complexity:** **O(n)** for the queue nodes.
-
-**Note:** `pop_front` does not check whether the queue is empty and does not update `tail` when the last node is removed. The displayed example has enough nodes, so it works for that one removal.
-
----
-
-## Question 13 — Stack Using an Array ([`StackArray.cpp`](StackArray.cpp))
+## Question 11 — Stack Using an Array ([`StackArray.cpp`](StackArray.cpp))
 
 **Aim:** To implement basic stack operations using an array.
 
@@ -174,7 +146,21 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 14 — Queue Using an Array ([`QueueArray.cpp`](QueueArray.cpp))
+## Question 12 — Stack Using a Linked List ([`StackLL.cpp`](StackLL.cpp))
+
+**Aim:** To implement a stack by using a singly linked list.
+
+**Working:** We create nodes with data and a next pointer. The `push_back` function adds each new value at the tail of the linked list, which works as the top of the stack. The `pop_back` function travels through the list to find the node before the tail, removes the old tail, and updates the tail pointer. The main function pushes five values, prints the stack, removes the top value, and prints the stack again.
+
+**Time Complexity:** `push_back` is **O(1)** because the tail pointer is available. `pop_back` is **O(n)** because it must move from the head to the node before the tail. Printing is **O(n)**.
+
+**Space Complexity:** **O(n)** for the nodes in the stack.
+
+**Note:** `pop_back` does not handle a stack with exactly one node, because it tries to find a node before the head.
+
+---
+
+## Question 13 — Queue Using an Array ([`QueueArray.cpp`](QueueArray.cpp))
 
 **Aim:** To implement basic queue operations using an array. The program can insert an element at the back and remove an element from the front.
 
@@ -185,6 +171,20 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Space Complexity:** **O(1)** extra space. The array size is fixed in this program.
 
 **Note:** The array is declared with size 5, but inserting one more value writes outside that array. A larger array or capacity check is needed for safe insertion.
+
+---
+
+## Question 14 — Queue Using a Linked List ([`QueueLL.cpp`](QueueLL.cpp))
+
+**Aim:** To implement a queue by using a singly linked list.
+
+**Working:** We create a queue class with head and tail pointers. The `push_back` function adds a new node at the tail, which is the rear of the queue. The `pop_front` function removes the node from the head, which is the front of the queue. Therefore, the first value inserted is the first value removed. The main function inserts five values, prints the queue, removes one value from the front, and prints the queue again.
+
+**Time Complexity:** Both `push_back` and `pop_front` are **O(1)**. Printing is **O(n)**.
+
+**Space Complexity:** **O(n)** for the queue nodes.
+
+**Note:** `pop_front` does not check whether the queue is empty and does not update `tail` when the last node is removed. The displayed example has enough nodes, so it works for that one removal.
 
 ---
 
