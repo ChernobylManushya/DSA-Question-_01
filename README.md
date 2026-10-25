@@ -69,20 +69,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Space Complexity:** **O(1)** because only a fixed number of variables are used.
 
 ---
-
-## Question 6 — Move Zeros to End ([`ZeroAtLast.cpp`](ZeroAtLast.cpp))
-
-**Aim:** To shift all zero elements to the end of an array.
-
-**Working:** We traverse the array to identify each zero element. When a zero is detected, subsequent elements are shifted one position to the left, decreasing the active count, and a zero is placed at the end. The final rearranged array is printed.
-
-**Time Complexity:** **O(n²)** in the shifting approach.
-
-**Space Complexity:** **O(1)** in-place array modification.
-
----
-
-## Question 7 — Horizontal Range of a Projectile ([`FindingHoriRange.cpp`](FindingHoriRange.cpp))
+## Question 8 — Horizontal Range of a Projectile ([`FindingHoriRange.cpp`](FindingHoriRange.cpp))
 
 **Aim:** To find the horizontal range of a projectile.
 
@@ -91,6 +78,19 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Time Complexity:** **O(1)** because only fixed calculations are used.
 
 **Space Complexity:** **O(1)** because only a fixed number of variables are used.
+
+
+---
+
+## Question 7 — Move Zeros to End ([`ZeroAtLast.cpp`](ZeroAtLast.cpp))
+
+**Aim:** To shift all zero elements to the end of an array.
+
+**Working:** We traverse the array to identify each zero element. When a zero is detected, subsequent elements are shifted one position to the left, decreasing the active count, and a zero is placed at the end. The final rearranged array is printed.
+
+**Time Complexity:** **O(n²)** in the shifting approach.
+
+**Space Complexity:** **O(1)** in-place array modification.
 
 ---
 
