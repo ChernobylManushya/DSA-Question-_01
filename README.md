@@ -188,45 +188,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 15 — Merge Two Sorted Arrays ([`MergeSortedArray.cpp`](MergeSortedArray.cpp))
-
-**Aim:** To merge two sorted arrays into one sorted array.
-
-**Working:** We first take five elements for each array and print both arrays. The `merge` function compares the current element of both arrays. The smaller element is copied into a third array, and the pointer of that array moves forward. After one array is finished, the remaining elements of the other array are copied. At the end, the third merged array is printed.
-
-**Time Complexity:** **O(n + m)**, where `n` and `m` are the sizes of the two arrays. In this code both sizes are 5.
-
-**Space Complexity:** **O(n + m)** for the third array.
-
-**Note:** Both input arrays must already be sorted. Also, the remaining-element loops use `n * 2` as their end limit even though each input array has only `n` elements, so the code can read outside an input array. Those loop limits should end at `n`.
-
----
-
-## Question 16 — Merge Sort Using an Array ([`MergeSorting.cpp`](MergeSorting.cpp))
-
-**Aim:** To sort ten array elements by using the merge sort algorithm.
-
-**Working:** We create an array by taking ten values from the user. The `mergeSort` function divides the array into two halves again and again until every part has one element. Then the `merge` function compares elements from the two sorted halves, stores them in a temporary array, and copies the sorted result back to the original array. Finally, the sorted array is printed.
-
-**Time Complexity:** **O(n log n)** in best, average, and worst cases.
-
-**Space Complexity:** **O(n)** for the temporary merged array. The program uses an array of size 10 for this purpose.
-
----
-
-## Question 17 — Merge Sort Using a Linked List ([`MergeSortLL.cpp`](MergeSortLL.cpp))
-
-**Aim:** To sort a singly linked list using merge sort.
-
-**Working:** We create a linked list by inserting the given values at the front. The `mergeSort` function first finds the middle of the list using slow and fast pointers. It breaks the list into two parts, recursively sorts both parts, and then joins them in sorted order using the `merge` function. The final sorted linked list is printed.
-
-**Time Complexity:** **O(n log n)** because the list is divided into halves and merged at every level.
-
-**Space Complexity:** The recursion uses **O(log n)** call-stack space. In this particular code, `merge` creates new nodes instead of reconnecting the old nodes, and the old nodes are not freed; across the whole run this can allocate **O(n log n)** node storage.
-
----
-
-## Question 18 — Circular Queue ([`CircularQueue.cpp`](CircularQueue.cpp))
+## Question 15 — Circular Queue ([`CircularQueue.cpp`](CircularQueue.cpp))
 
 **Aim:** To implement a circular queue using an array.
 
@@ -238,7 +200,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 19 — Doubly Linked List Operations ([`DoublyLL.cpp`](DoublyLL.cpp))
+## Question 16 — Doubly Linked List Operations ([`DoublyLL.cpp`](DoublyLL.cpp))
 
 **Aim:** To perform insertion and deletion operations in a doubly linked list.
 
@@ -252,7 +214,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 20 — Queue Using a Doubly Linked List ([`QueueDLL.cpp`](QueueDLL.cpp))
+## Question 17 — Queue Using a Doubly Linked List ([`QueueDLL.cpp`](QueueDLL.cpp))
 
 **Aim:** To implement a queue using a doubly linked list.
 
@@ -264,7 +226,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 21 — Stack Using a Doubly Linked List ([`StackDLL.cpp`](StackDLL.cpp))
+## Question 18 — Stack Using a Doubly Linked List ([`StackDLL.cpp`](StackDLL.cpp))
 
 **Aim:** To implement a stack using a doubly linked list.
 
@@ -276,7 +238,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 ---
 
-## Question 22 — Tower of Hanoi ([`TOH.cpp`](TOH.cpp))
+## Question 19 — Tower of Hanoi ([`TOH.cpp`](TOH.cpp))
 
 **Aim:** To display the steps for moving disks in the Tower of Hanoi problem.
 
@@ -285,6 +247,46 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Time Complexity:** For a general input of `n` disks, it is **O(2^n)**. As written, the program always uses 4 disks, so it performs a fixed number of moves.
 
 **Space Complexity:** **O(n)** recursion-stack space; as written, the depth is fixed at 4.
+
+
+---
+
+## Question 20 — Merge Two Sorted Arrays ([`MergeSortedArray.cpp`](MergeSortedArray.cpp))
+
+**Aim:** To merge two sorted arrays into one sorted array.
+
+**Working:** We first take five elements for each array and print both arrays. The `merge` function compares the current element of both arrays. The smaller element is copied into a third array, and the pointer of that array moves forward. After one array is finished, the remaining elements of the other array are copied. At the end, the third merged array is printed.
+
+**Time Complexity:** **O(n + m)**, where `n` and `m` are the sizes of the two arrays. In this code both sizes are 5.
+
+**Space Complexity:** **O(n + m)** for the third array.
+
+**Note:** Both input arrays must already be sorted. Also, the remaining-element loops use `n * 2` as their end limit even though each input array has only `n` elements, so the code can read outside an input array. Those loop limits should end at `n`.
+
+---
+
+## Question 21 — Merge Sort Using an Array ([`MergeSorting.cpp`](MergeSorting.cpp))
+
+**Aim:** To sort ten array elements by using the merge sort algorithm.
+
+**Working:** We create an array by taking ten values from the user. The `mergeSort` function divides the array into two halves again and again until every part has one element. Then the `merge` function compares elements from the two sorted halves, stores them in a temporary array, and copies the sorted result back to the original array. Finally, the sorted array is printed.
+
+**Time Complexity:** **O(n log n)** in best, average, and worst cases.
+
+**Space Complexity:** **O(n)** for the temporary merged array. The program uses an array of size 10 for this purpose.
+
+---
+
+## Question 22 — Merge Sort Using a Linked List ([`MergeSortLL.cpp`](MergeSortLL.cpp))
+
+**Aim:** To sort a singly linked list using merge sort.
+
+**Working:** We create a linked list by inserting the given values at the front. The `mergeSort` function first finds the middle of the list using slow and fast pointers. It breaks the list into two parts, recursively sorts both parts, and then joins them in sorted order using the `merge` function. The final sorted linked list is printed.
+
+**Time Complexity:** **O(n log n)** because the list is divided into halves and merged at every level.
+
+**Space Complexity:** The recursion uses **O(log n)** call-stack space. In this particular code, `merge` creates new nodes instead of reconnecting the old nodes, and the old nodes are not freed; across the whole run this can allocate **O(n log n)** node storage.
+
 
 ---
 
