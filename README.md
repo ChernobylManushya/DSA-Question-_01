@@ -69,7 +69,7 @@ At the end, we call the `findRoots` function with arguments in the main function
 **Space Complexity:** **O(1)** because only a fixed number of variables are used.
 
 ---
-## Question 8 — Horizontal Range of a Projectile ([`FindingHoriRange.cpp`](FindingHoriRange.cpp))
+## Question 6 — Horizontal Range of a Projectile ([`FindingHoriRange.cpp`](FindingHoriRange.cpp))
 
 **Aim:** To find the horizontal range of a projectile.
 
