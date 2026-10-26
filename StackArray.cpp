@@ -18,24 +18,26 @@ void printArr(int arr[], int n){
     }
 }
 
-bool push_back(int arr[], int &n, int capacity, int value){
+void push_back(int arr[], int &n, int capacity, int value){
     if (n == capacity){
-        return false;
+        cout<<"stack is full"<<endl;
+        return;
     }
     arr[n++] = value;
-    return true;
+    return;
 }
 
-bool pop_back(int arr[], int &n){
+void pop_back(int arr[], int &n){
     if (n == 0){
-        return false;
+        cout<<"Stack is empty"<<endl;
+        return ;
     }
     arr[--n] = 0;
-    return true;
+    return;
 }
 
 int main() {
-    const int capacity = 10;
+    int capacity = 10;
     int size=5;
     int arr[capacity];
     createArr(arr, size);
@@ -50,15 +52,11 @@ int main() {
     switch(i){
         case 1: cout<<"Enter the value you want to insert: ";
                 cin>>value;
-                if (!push_back(arr, size, capacity, value)){
-                    cout<<"Stack is full."<<endl;
-                }
+                push_back(arr, size, capacity, value);
                 printArr(arr, size);
                 break;
         
-        case 2: if (!pop_back(arr, size)){
-                    cout<<"Stack is empty."<<endl;
-                }
+        case 2: pop_back(arr, size);
                 printArr(arr, size); 
                 break;
 
