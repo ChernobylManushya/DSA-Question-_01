@@ -3,7 +3,12 @@
 
 **Aim:** If a ball is dropped from height `h`, find after how many tips the ball stops when its speed becomes half after every tip.
 
-**Working:** We create a function named `noOfTips` which takes speed as input. Inside the function, we use a count variable to count how many tips are done before the ball stops. In every step, the speed becomes half. At the end, we call the `noOfTips` function in the main function by passing speed as an argument.
+**Working:**
+
+1. We create a function named `noOfTips` which takes speed as input.
+2. Inside the function, we use a count variable to count how many tips are done before the ball stops.
+3. In every step, the speed becomes half.
+4. At the end, we call the `noOfTips` function in the main function by passing speed as an argument.
 
 **Time Complexity:** **O(log s)**, where `s` is the initial speed, because the speed becomes half in every step.
 
@@ -15,13 +20,16 @@
 
 **Aim:** To find the roots of a quadratic equation.
 
-**Working:** We create a function named `findRoots` which takes three coefficients as input. Then we create a variable `d` to calculate the discriminant of the quadratic equation. We use two variables named `root1` and `root2` for calculating the roots. We use conditional statements for three cases:
+**Working:**
 
-1. When `d = 0`, both roots are real and same.
-2. When `d > 0`, both roots are real and distinct.
-3. When `d < 0`, the roots are imaginary.
-
-At the end, we call the `findRoots` function with arguments in the main function.
+1. We create a function named `findRoots` which takes three coefficients as input.
+2. Then we create a variable `d` to calculate the discriminant of the quadratic equation.
+3. We use two variables named `root1` and `root2` for calculating the roots.
+4. We use conditional statements for three cases:
+5. When `d = 0`, both roots are real and same.
+6. When `d > 0`, both roots are real and distinct.
+7. When `d < 0`, the roots are imaginary.
+8. At the end, we call the `findRoots` function with arguments in the main function.
 
 **Time Complexity:** **O(1)** because a fixed number of calculations and conditions are used.
 
@@ -38,7 +46,17 @@ At the end, we call the `findRoots` function with arguments in the main function
 3. Insertion at the last.
 4. Deleting an element from the array.
 
-**Working:** We create a function named `unsortedADT` in which we take input `n`. Then we use a `for` loop to take array elements from the user and another loop to print the array. We create variables for the new element, choice, and position. In the menu, we give four options for insertion at the beginning, middle, and end, and for deletion. We take the choice from the user and use a switch case. For insertion at the beginning and middle, we shift elements to make space for the new element. For insertion at the end, we add the element at the last position and increase the size. For deletion, we first search the required element by linear search and then shift elements to remove it. At the end, we call the function from the main function.
+**Working:**
+
+1. We create a function named `unsortedADT` in which we take input `n`.
+2. Then we use a `for` loop to take array elements from the user and another loop to print the array.
+3. We create variables for the new element, choice, and position.
+4. In the menu, we give four options for insertion at the beginning, middle, and end, and for deletion.
+5. We take the choice from the user and use a switch case.
+6. For insertion at the beginning and middle, we shift elements to make space for the new element.
+7. For insertion at the end, we add the element at the last position and increase the size.
+8. For deletion, we first search the required element by linear search and then shift elements to remove it.
+9. At the end, we call the function from the main function.
 
 **Time Complexity:** Insertion at the beginning, middle, and deletion are **O(n)** because elements may be shifted. Insertion at the end is **O(1)** when there is free space.
 
@@ -50,7 +68,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To find the time of flight of a projectile.
 
-**Working:** We use the `cmath` library in C++ for mathematical calculations. We create a function named `timeOfFlight` with two arguments: speed and angle. Inside the function, we create a variable named `radian` to convert the angle from degree to radian. Then we calculate the time of flight by using the projectile-motion formula. At last, we call the function in the main function with arguments.
+**Working:**
+
+1. We use the `cmath` library in C++ for mathematical calculations.
+2. We create a function named `timeOfFlight` with two arguments: speed and angle.
+3. Inside the function, we create a variable named `radian` to convert the angle from degree to radian.
+4. Then we calculate the time of flight by using the projectile-motion formula.
+5. At last, we call the function in the main function with arguments.
 
 **Time Complexity:** **O(1)** because the function uses only fixed calculations.
 
@@ -62,7 +86,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To find the maximum height attained by a projectile.
 
-**Working:** We create a function named `Hmax` with two arguments: speed and angle. We create a variable named `radian` to convert the angle from degrees to radians. Then we calculate the maximum height obtained by the projectile by using the projectile-motion formula. At last, we call the function in the main function with arguments.
+**Working:**
+
+1. We create a function named `Hmax` with two arguments: speed and angle.
+2. We create a variable named `radian` to convert the angle from degrees to radians.
+3. Then we calculate the maximum height obtained by the projectile by using the projectile-motion formula.
+4. At last, we call the function in the main function with arguments.
 
 **Time Complexity:** **O(1)** because only fixed calculations are performed.
 
@@ -73,7 +102,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To find the horizontal range of a projectile.
 
-**Working:** We create a function named `range` with two arguments: speed and angle. We create a variable named `radian` to convert the angle from degree to radian. Then we calculate the horizontal range by using the range formula of projectile motion. At the end, we call the function with arguments in the main function.
+**Working:**
+
+1. We create a function named `range` with two arguments: speed and angle.
+2. We create a variable named `radian` to convert the angle from degree to radian.
+3. Then we calculate the horizontal range by using the range formula of projectile motion.
+4. At the end, we call the function with arguments in the main function.
 
 **Time Complexity:** **O(1)** because only fixed calculations are used.
 
@@ -86,7 +120,11 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To shift all zero elements to the end of an array.
 
-**Working:** We traverse the array to identify each zero element. When a zero is detected, subsequent elements are shifted one position to the left, decreasing the active count, and a zero is placed at the end. The final rearranged array is printed.
+**Working:**
+
+1. We traverse the array to identify each zero element.
+2. When a zero is detected, subsequent elements are shifted one position to the left, decreasing the active count, and a zero is placed at the end.
+3. The final rearranged array is printed.
 
 **Time Complexity:** **O(n²)** in the shifting approach.
 
@@ -98,7 +136,14 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To shift all zeros to the end of an array in linear time.
 
-**Working:** We create a function named `shiftZero` which takes an integer array and `n` as parameters. In this function, we create a variable named `nonZeroCount` and initialize it with zero. We use a `for` loop and check `arr[i] != 0`. When an element is not zero, we put it at `arr[nonZeroCount++]`. Then we use another loop starting from `nonZeroCount` and fill the remaining positions with zeros. At last, we call the `shiftZero` function in the main function and use a loop to print the array.
+**Working:**
+
+1. We create a function named `shiftZero` which takes an integer array and `n` as parameters.
+2. In this function, we create a variable named `nonZeroCount` and initialize it with zero.
+3. We use a `for` loop and check `arr[i] != 0`.
+4. When an element is not zero, we put it at `arr[nonZeroCount++]`.
+5. Then we use another loop starting from `nonZeroCount` and fill the remaining positions with zeros.
+6. At last, we call the `shiftZero` function in the main function and use a loop to print the array.
 
 **Time Complexity:** **O(n)** because the array is traversed using linear scans.
 
@@ -110,7 +155,16 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To find the first duplicate element in an array.
 
-**Working:** First, we create a function named `createArray` and use a `for` loop to enter the array elements. Then we create another function named `findDuplicate` with array and integer `n` as parameters. In this function, we use two loops. The first loop starts from `i` and goes up to `n`. The second loop starts from `j = i + 1` and goes up to `n`. Inside the second loop, we compare `arr[i] == arr[j]`. When both elements are equal, we find the duplicate number and use a break statement for the outer loop. At last, we call `findDuplicate` in the main function by passing the array and `n`.
+**Working:**
+
+1. First, we create a function named `createArray` and use a `for` loop to enter the array elements.
+2. Then we create another function named `findDuplicate` with array and integer `n` as parameters.
+3. In this function, we use two loops.
+4. The first loop starts from `i` and goes up to `n`.
+5. The second loop starts from `j = i + 1` and goes up to `n`.
+6. Inside the second loop, we compare `arr[i] == arr[j]`.
+7. When both elements are equal, we find the duplicate number and use a break statement for the outer loop.
+8. At last, we call `findDuplicate` in the main function by passing the array and `n`.
 
 **Time Complexity:** **O(n²)** in the worst case because two nested loops are used.
 
@@ -122,7 +176,15 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement different operations on a singly linked list, such as inserting, deleting, searching, and printing elements.
 
-**Working:** We create a `Node` class that stores one value and the pointer to the next node. Then we create a `list` class with `head` and `tail` pointers. The program has functions named `push_front` and `push_back` for adding values at the front and back. The `insert` function adds a new node at the given position, while `pop_front` and `pop_back` remove a node from the front and back. The `search` function moves through the linked list and returns the index of the required value. The `getSize` function counts the nodes, and `deleteElement` removes a node by using the given number and list size. In the main function, the user selects one of these operations from a menu.
+**Working:**
+
+1. We create a `Node` class that stores one value and the pointer to the next node.
+2. Then we create a `list` class with `head` and `tail` pointers.
+3. The program has functions named `push_front` and `push_back` for adding values at the front and back.
+4. The `insert` function adds a new node at the given position, while `pop_front` and `pop_back` remove a node from the front and back.
+5. The `search` function moves through the linked list and returns the index of the required value.
+6. The `getSize` function counts the nodes, and `deleteElement` removes a node by using the given number and list size.
+7. In the main function, the user selects one of these operations from a menu.
 
 **Time Complexity:** `push_front` and `pop_front` are **O(1)**. `push_back` is **O(1)** because a tail pointer is used. `insert`, `pop_back`, `search`, `getSize`, and `deleteElement` are **O(n)** in the worst case.
 
@@ -136,7 +198,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement basic stack operations using an array.
 
-**Working:** We first create an array of five values by taking input from the user. The array is printed and then the user selects one operation. In the first choice, `push_back` puts a new value after the current last value and increases the size. In the second choice, `pop_back` decreases the size to remove the last stack value. Both operations happen from the same end of the array, so they follow the stack's last-in, first-out rule.
+**Working:**
+
+1. We first create an array of five values by taking input from the user.
+2. The array is printed and then the user selects one operation.
+3. In the first choice, `push_back` puts a new value after the current last value and increases the size.
+4. In the second choice, `pop_back` decreases the size to remove the last stack value.
+5. Both operations happen from the same end of the array, so they follow the stack's last-in, first-out rule.
 
 **Time Complexity:** Both push and pop are **O(1)**. Printing the array is **O(n)**.
 
@@ -150,7 +218,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a stack by using a singly linked list.
 
-**Working:** We create nodes with data and a next pointer. The `push_back` function adds each new value at the tail of the linked list, which works as the top of the stack. The `pop_back` function travels through the list to find the node before the tail, removes the old tail, and updates the tail pointer. The main function pushes five values, prints the stack, removes the top value, and prints the stack again.
+**Working:**
+
+1. We create nodes with data and a next pointer.
+2. The `push_back` function adds each new value at the tail of the linked list, which works as the top of the stack.
+3. The `pop_back` function travels through the list to find the node before the tail, removes the old tail, and updates the tail pointer.
+4. The main function pushes five values, prints the stack, removes the top value, and prints the stack again.
 
 **Time Complexity:** `push_back` is **O(1)** because the tail pointer is available. `pop_back` is **O(n)** because it must move from the head to the node before the tail. Printing is **O(n)**.
 
@@ -164,7 +237,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement basic queue operations using an array. The program can insert an element at the back and remove an element from the front.
 
-**Working:** First, we create an array of five elements by taking input from the user. Then the program prints the array and shows a menu with two choices. In the first choice, the `push_back` function puts a new value at index `n` and increases the size. In the second choice, the `pop_front` function shifts every element one position to the left and decreases the size. This follows the queue idea: insertion from the back and deletion from the front.
+**Working:**
+
+1. First, we create an array of five elements by taking input from the user.
+2. Then the program prints the array and shows a menu with two choices.
+3. In the first choice, the `push_back` function puts a new value at index `n` and increases the size.
+4. In the second choice, the `pop_front` function shifts every element one position to the left and decreases the size.
+5. This follows the queue idea: insertion from the back and deletion from the front.
 
 **Time Complexity:** `push_back` is **O(1)**. `pop_front` is **O(n)** because all remaining elements are shifted.
 
@@ -178,7 +257,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a queue by using a singly linked list.
 
-**Working:** We create a queue class with head and tail pointers. The `push_back` function adds a new node at the tail, which is the rear of the queue. The `pop_front` function removes the node from the head, which is the front of the queue. Therefore, the first value inserted is the first value removed. The main function inserts five values, prints the queue, removes one value from the front, and prints the queue again.
+**Working:**
+
+1. We create a queue class with head and tail pointers.
+2. The `push_back` function adds a new node at the tail, which is the rear of the queue.
+3. The `pop_front` function removes the node from the head, which is the front of the queue.
+4. Therefore, the first value inserted is the first value removed.
+5. The main function inserts five values, prints the queue, removes one value from the front, and prints the queue again.
 
 **Time Complexity:** Both `push_back` and `pop_front` are **O(1)**. Printing is **O(n)**.
 
@@ -192,7 +277,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a circular queue using an array.
 
-**Working:** We create a queue with capacity 5 and keep four values: capacity, current size, front index, and rear index. When `push` is called, the rear index moves by `(rear + 1) % capacity`, so after reaching the last index it comes back to the start. When `pop` is called, the front index moves in the same circular way. The program first inserts five values, prints the queue, removes two values from the front, and prints the remaining queue.
+**Working:**
+
+1. We create a queue with capacity 5 and keep four values: capacity, current size, front index, and rear index.
+2. When `push` is called, the rear index moves by `(rear + 1) % capacity`, so after reaching the last index it comes back to the start.
+3. When `pop` is called, the front index moves in the same circular way.
+4. The program first inserts five values, prints the queue, removes two values from the front, and prints the remaining queue.
 
 **Time Complexity:** `push`, `pop`, and `empty` are all **O(1)**. Printing is **O(n)**.
 
@@ -204,7 +294,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To perform insertion and deletion operations in a doubly linked list.
 
-**Working:** We create a `Node` with data, next, and previous pointers. The `DoublyLL` class provides `push_front`, `push_back`, `insert`, `pop_front`, and `pop_back` functions. In the main function, values are added at the front and back, a value is inserted after a given position, and values are removed from both ends. The `printLL` function prints the list from head to tail.
+**Working:**
+
+1. We create a `Node` with data, next, and previous pointers.
+2. The `DoublyLL` class provides `push_front`, `push_back`, `insert`, `pop_front`, and `pop_back` functions.
+3. In the main function, values are added at the front and back, a value is inserted after a given position, and values are removed from both ends.
+4. The `printLL` function prints the list from head to tail.
 
 **Time Complexity:** `push_front`, `push_back`, `pop_front`, and `pop_back` are **O(1)**. `insert` is **O(pos)** because it moves through the list to reach the position. Printing is **O(n)**.
 
@@ -218,7 +313,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a queue using a doubly linked list.
 
-**Working:** The `enqueue` function inserts every new node at the head of the doubly linked list. The `dequeue` function removes a node from the tail. Because the oldest inserted value reaches the tail, deletion happens in first-in, first-out order. The program adds five values, prints the list, removes two values, and prints it again.
+**Working:**
+
+1. The `enqueue` function inserts every new node at the head of the doubly linked list.
+2. The `dequeue` function removes a node from the tail.
+3. Because the oldest inserted value reaches the tail, deletion happens in first-in, first-out order.
+4. The program adds five values, prints the list, removes two values, and prints it again.
 
 **Time Complexity:** Both `enqueue` and `dequeue` are **O(1)**. Printing is **O(n)**.
 
@@ -230,7 +330,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a stack using a doubly linked list.
 
-**Working:** The program uses the head of the list as the top of the stack. The `push_front` function adds a new value at the head, and `pop_front` removes the head value. Therefore, the last value inserted is the first value removed, which follows the stack's LIFO rule. The program pushes five values, prints the stack, pops one value, and prints it again.
+**Working:**
+
+1. The program uses the head of the list as the top of the stack.
+2. The `push_front` function adds a new value at the head, and `pop_front` removes the head value.
+3. Therefore, the last value inserted is the first value removed, which follows the stack's LIFO rule.
+4. The program pushes five values, prints the stack, pops one value, and prints it again.
 
 **Time Complexity:** Both push and pop are **O(1)**. Printing is **O(n)**.
 
@@ -242,7 +347,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To display the steps for moving disks in the Tower of Hanoi problem.
 
-**Working:** The `TOH` function uses recursion. If there is only one disk, it prints a move from the source rod to the destination rod. Otherwise, it first moves `n - 1` disks from the source to the helper rod, moves the largest disk to the destination, and then moves the `n - 1` disks from the helper rod to the destination. The program asks the user for the number of disks, but currently calls `TOH(4, 'S', 'H', 'D')`, so it always displays the moves for four disks.
+**Working:**
+
+1. The `TOH` function uses recursion.
+2. If there is only one disk, it prints a move from the source rod to the destination rod.
+3. Otherwise, it first moves `n - 1` disks from the source to the helper rod, moves the largest disk to the destination, and then moves the `n - 1` disks from the helper rod to the destination.
+4. The program asks the user for the number of disks, but currently calls `TOH(4, 'S', 'H', 'D')`, so it always displays the moves for four disks.
 
 **Time Complexity:** For a general input of `n` disks, it is **O(2^n)**. As written, the program always uses 4 disks, so it performs a fixed number of moves.
 
@@ -255,7 +365,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To merge two sorted arrays into one sorted array.
 
-**Working:** We first take five elements for each array and print both arrays. The `merge` function compares the current element of both arrays. The smaller element is copied into a third array, and the pointer of that array moves forward. After one array is finished, the remaining elements of the other array are copied. At the end, the third merged array is printed.
+**Working:**
+
+1. We first take five elements for each array and print both arrays.
+2. The `merge` function compares the current element of both arrays.
+3. The smaller element is copied into a third array, and the pointer of that array moves forward.
+4. After one array is finished, the remaining elements of the other array are copied.
+5. At the end, the third merged array is printed.
 
 **Time Complexity:** **O(n + m)**, where `n` and `m` are the sizes of the two arrays. In this code both sizes are 5.
 
@@ -269,7 +385,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To sort ten array elements by using the merge sort algorithm.
 
-**Working:** We create an array by taking ten values from the user. The `mergeSort` function divides the array into two halves again and again until every part has one element. Then the `merge` function compares elements from the two sorted halves, stores them in a temporary array, and copies the sorted result back to the original array. Finally, the sorted array is printed.
+**Working:**
+
+1. We create an array by taking ten values from the user.
+2. The `mergeSort` function divides the array into two halves again and again until every part has one element.
+3. Then the `merge` function compares elements from the two sorted halves, stores them in a temporary array, and copies the sorted result back to the original array.
+4. Finally, the sorted array is printed.
 
 **Time Complexity:** **O(n log n)** in best, average, and worst cases.
 
@@ -281,7 +402,12 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To sort a singly linked list using merge sort.
 
-**Working:** We create a linked list by inserting the given values at the front. The `mergeSort` function first finds the middle of the list using slow and fast pointers. It breaks the list into two parts, recursively sorts both parts, and then joins them in sorted order using the `merge` function. The final sorted linked list is printed.
+**Working:**
+
+1. We create a linked list by inserting the given values at the front.
+2. The `mergeSort` function first finds the middle of the list using slow and fast pointers.
+3. It breaks the list into two parts, recursively sorts both parts, and then joins them in sorted order using the `merge` function.
+4. The final sorted linked list is printed.
 
 **Time Complexity:** **O(n log n)** because the list is divided into halves and merged at every level.
 
@@ -294,7 +420,13 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To sort non-negative integer values using radix sort and ten linked-list buckets.
 
-**Working:** We first create a linked list by pushing values at the front. In `redixSort`, the program checks one digit at a time: ones, tens, hundreds, and so on. For each digit, it puts nodes into buckets 0 to 9. Then it joins the buckets from 0 to 9, making the list sorted for that digit. Repeating this for all digit places gives radix-sort behaviour.
+**Working:**
+
+1. We first create a linked list by pushing values at the front.
+2. In `redixSort`, the program checks one digit at a time: ones, tens, hundreds, and so on.
+3. For each digit, it puts nodes into buckets 0 to 9.
+4. Then it joins the buckets from 0 to 9, making the list sorted for that digit.
+5. Repeating this for all digit places gives radix-sort behaviour.
 
 **Time Complexity:** In a correct radix-sort implementation, it is **O(d(n + 10))**, where `d` is the number of digits in the largest value and `n` is the number of nodes.
 
@@ -308,7 +440,16 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To sort an array by using bucket sort and linked lists.
 
-**Working:** We first create a `Node` class and a `LinkedList` class. The `push` function inserts values into a linked-list bucket. In the `bucketSort` function, we first find the maximum value in the array. Then we create ten buckets. For every array element, we calculate its bucket index by using `(arr[i] * 10) / (max + 1)` and put the value into that bucket. After that, we call the `sort` function for every bucket. This function compares the values inside a linked list and swaps their data when needed. Finally, we visit all ten buckets from first to last and copy their values back to the original array.
+**Working:**
+
+1. We first create a `Node` class and a `LinkedList` class.
+2. The `push` function inserts values into a linked-list bucket.
+3. In the `bucketSort` function, we first find the maximum value in the array.
+4. Then we create ten buckets.
+5. For every array element, we calculate its bucket index by using `(arr[i] * 10) / (max + 1)` and put the value into that bucket.
+6. After that, we call the `sort` function for every bucket.
+7. This function compares the values inside a linked list and swaps their data when needed.
+8. Finally, we visit all ten buckets from first to last and copy their values back to the original array.
 
 **Time Complexity:** Finding the maximum and placing values into buckets takes **O(n)**. Sorting the buckets is **O(Σ bᵢ²)**, where `bᵢ` is the number of elements in one bucket. In the worst case, all values go into one bucket, so the overall time complexity is **O(n²)**.
 
@@ -322,7 +463,15 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To sort an array by using bin sort and linked lists.
 
-**Working:** We first create a `Node` class and a `LinkedList` class. In the `binSort` function, we find the maximum value from the array. Then we create `max + 1` bins, where every bin is a linked list. We use the array value itself as the bin index. For example, all values equal to `2` are stored in `bin[2]`. At the end, we visit all bins from `0` to `max` and copy their values back into the array. In this way, the final array becomes sorted.
+**Working:**
+
+1. We first create a `Node` class and a `LinkedList` class.
+2. In the `binSort` function, we find the maximum value from the array.
+3. Then we create `max + 1` bins, where every bin is a linked list.
+4. We use the array value itself as the bin index.
+5. For example, all values equal to `2` are stored in `bin[2]`.
+6. At the end, we visit all bins from `0` to `max` and copy their values back into the array.
+7. In this way, the final array becomes sorted.
 
 **Time Complexity:** **O(n + max)**, where `n` is the number of elements and `max` is the largest array value.
 
@@ -336,7 +485,11 @@ At the end, we call the `findRoots` function with arguments in the main function
 
 **Aim:** To implement a bounded Linear Queue class with `enQueue`, `deQueue`, `peek`, and `isEmpty` methods.
 
-**Working:** The class initializes a fixed-capacity buffer with `front = -1` and `rear = -1`. Elements are enqueued at `rear` and dequeued from `front`. When the queue becomes empty after removals, pointers reset to `-1`.
+**Working:**
+
+1. The class initializes a fixed-capacity buffer with `front = -1` and `rear = -1`.
+2. Elements are enqueued at `rear` and dequeued from `front`.
+3. When the queue becomes empty after removals, pointers reset to `-1`.
 
 **Time Complexity:** **O(1)** for `enQueue`, `deQueue`, `peek`, and `isEmpty`.
 
@@ -345,8 +498,6 @@ At the end, we call the `findRoots` function with arguments in the main function
 ---
 
 # Trees and Heap Sort Implementations
-
-This section summarizes the tree and heap-sort programs in this repository.
 
 ## 1. Binary Tree
 
@@ -437,18 +588,362 @@ The result is sorted in ascending order when a max heap is used.
 
 ## 5. Heap Sort Using Linked-Tree Nodes
 
-Source: [`HeapSortLL.cpp`](HeapSortLL.cpp)
+## Detailed step-by-step explanation of `HeapSortLL.cpp`
 
-This implementation represents the heap with linked `Node` objects instead of
-an array. New nodes are inserted level by level using a queue so the structure
-remains a complete binary tree. Heapification compares a node with its
-children and moves the largest value upward.
+Source file: [`HeapSortLL.cpp`](HeapSortLL.cpp)
 
-The linked-tree version demonstrates the heap property, but it is less direct
-than array-based heap sort because finding the last node and maintaining the
-complete-tree structure require extra pointer or traversal logic. For a heap
-with `n` nodes, heapify work is `O(n)` when every node is processed once, while
-individual downward heapify operations take `O(log n)` in a balanced tree.
+### Working
+
+1. The program creates linked `Node` objects containing a value, a left pointer, and a right pointer.
+2. The `insert` function adds every new node level by level using a queue.
+3. Level-order insertion keeps the binary tree complete.
+4. The values `5, 9, 8, 7, 6, 2, 1` are inserted by `main`.
+5. The `buildHeap` function visits the tree recursively and converts it into a max heap.
+6. The `maxHeapify` function compares a node with its children and moves the largest value toward the root.
+7. The `countNodes` function counts the total number of nodes.
+8. The `heapSort` function finds the last node and its parent using level-order traversal.
+9. The root value is swapped with the last node's value, placing the largest value at the last active position.
+10. The last node is disconnected from the tree and deleted.
+11. `maxHeapify` is called again to restore the max-heap property.
+12. These steps repeat until only one node remains.
+13. The `inorder` function displays the values left in the tree.
+
+### 1. Node structure
+
+Each node stores an integer named `data` and pointers named `left` and `right`. The constructor stores the value and initializes both child pointers to `NULL`. Because linked nodes do not have direct array indexes, the program uses queues whenever it needs level-order access.
+
+### 2. Level-order insertion
+
+`insert(root, value)` creates a root when the tree is empty. Otherwise, it puts the root into a queue and checks nodes from left to right. The new node is attached to the first missing left or right child. Existing children are added to the queue so the next level is checked afterward. This keeps the tree complete.
+
+The calls in `main` initially create:
+
+```text
+          5
+       /     \\
+      9       8
+     / \\     / \\
+    7   6   2   1
+```
+
+### 3. Max-heapification
+
+`maxHeapify(root)` compares the current node with its children and identifies the largest of the three. If a child is larger, it swaps only the `data` values and recursively continues at that child. The links and tree shape do not change. The max-heap rule is that every parent must be greater than or equal to both children, so the largest value reaches the root.
+
+### 4. Building the heap
+
+`buildHeap(root)` recursively processes the left subtree, the right subtree, and then the current node. Calling `maxHeapify` after processing the children allows each parent to be compared with already-heapified subtrees. When it finishes, the complete tree satisfies the max-heap property.
+
+### 5. Counting and locating nodes
+
+`countNodes(root)` returns `0` for an empty subtree and otherwise returns `1` plus the counts of the left and right subtrees. For the seven values inserted by `main`, it returns `7`.
+
+`getNode(root, pos)` uses a queue to find a node by one-based level-order position. Position `1` is the root, position `2` is its left child, and position `3` is its right child. This function replaces the direct index access that an array-based heap would provide.
+
+### 6. Sorting loop
+
+`heapSort(root, n)` first calls `buildHeap`. For every `i` from `n` down to `2`, it:
+
+1. Finds the last active node at position `i`.
+2. Finds its parent at position `i / 2`.
+3. Swaps the root value with the last node's value, placing the maximum at the end.
+4. Disconnects the last node. Even positions are left children; odd positions are right children.
+5. Deletes the removed node.
+6. Calls `maxHeapify(root)` to repair the smaller heap.
+
+Thus, one largest value is fixed during every loop iteration.
+
+### 7. Printing and `main`
+
+`inorder` visits the left subtree, current node, and right subtree. `main` creates an empty tree, inserts `5, 9, 8, 7, 6, 2, 1`, counts the nodes, calls `heapSort`, prints the label, and traverses the result.
+
+There is an important limitation in the current implementation: `heapSort` deletes the node containing each value that has been moved to the final position. It does not save those completed values in another structure. Therefore, after the loop finishes, only one node remains and `inorder` prints only that remaining value. With the values currently hard-coded in `main`, the observed output is expected to be:
+
+```text
+Sorted elements: 1
+```
+
+The intended complete sorted result would be `1 2 5 6 7 8 9`, but the code would need to preserve the removed nodes or print each removed maximum before deleting it to display the full sorted list.
+
+### 8. Complexity and implementation notes
+
+| Operation | Complexity | Explanation |
+| --- | ---: | --- |
+| Insert one node | `O(n)` | The queue may scan existing levels. |
+| Count nodes | `O(n)` | Every node is visited once. |
+| One `getNode` call | `O(n)` | It may scan the tree in level order. |
+| One `maxHeapify` call | `O(log n)` | It follows at most one tree path. |
+| This linked-tree `heapSort` | `O(n²)` worst case | Each pass searches for nodes with `getNode`. |
+| Extra space | `O(n)` | Queues and linked nodes need additional storage. |
+
+An array-based heap normally runs in `O(n log n)` because the last node and parent are found directly by index. This linked version is valuable for understanding the heap structure, but repeated level-order searches make it slower. Removed nodes are deleted, although the final remaining root is not explicitly deleted before `main` returns. Modern C++ would normally use `nullptr` instead of `NULL`.
+
+This section summarizes the tree and heap-sort programs in this repository.
+---
+
+# Working of All Programs — Point-wise Summary
+
+The following points describe the execution flow of every program documented in this README.
+
+## 1. Number of Ball Tips — `FindingTips.cpp`
+
+1. The program receives the initial speed.
+2. The `noOfTips` function starts a counter.
+3. The speed is divided by two after every tip.
+4. The counter increases until the speed becomes zero or stops changing.
+5. The final number of tips is displayed.
+
+## 2. Roots of a Quadratic Equation — `FindingRoots.cpp`
+
+1. The coefficients `a`, `b`, and `c` are provided.
+2. The discriminant `b² - 4ac` is calculated.
+3. If the discriminant is zero, equal real roots are calculated.
+4. If it is positive, two different real roots are calculated.
+5. If it is negative, the program reports imaginary roots.
+
+## 3. Unsorted Array ADT — `AbstactDatatype.cpp`
+
+1. The initial array elements are entered.
+2. The array is displayed.
+3. The user selects an insertion or deletion operation.
+4. Elements are shifted when insertion or deletion requires space.
+5. The updated array is printed.
+
+## 4. Projectile Time of Flight — `FindingTOF.cpp`
+
+1. Speed and angle are received.
+2. The angle is converted from degrees to radians.
+3. The time-of-flight formula is applied.
+4. The calculated time is displayed.
+
+## 5. Projectile Maximum Height — `FindingMaxH.cpp`
+
+1. Speed and angle are received.
+2. The angle is converted to radians.
+3. The maximum-height formula is evaluated.
+4. The result is printed.
+
+## 6. Projectile Horizontal Range — `FindingHoriRange.cpp`
+
+1. Speed and angle are received.
+2. The angle is converted to radians.
+3. The horizontal-range formula is applied.
+4. The calculated range is displayed.
+
+## 7. Move Zeros to the End — `ZeroAtLast.cpp`
+
+1. The array is traversed from left to right.
+2. When a zero is found, later elements are shifted left.
+3. The zero is moved to the end of the active portion.
+4. The process continues until all elements are checked.
+5. The modified array is printed.
+
+## 8. Linear Zero Shifting — `ShiftingOfZereos.cpp`
+
+1. A position for the next non-zero value is initialized.
+2. The array is scanned once.
+3. Every non-zero value is copied to the next available position.
+4. Remaining positions are filled with zeros.
+5. The final array is displayed.
+
+## 9. First Duplicate Element — `FindingDulpicates.cpp`
+
+1. The array values are entered.
+2. The first loop selects an element.
+3. The second loop compares it with all later elements.
+4. When equal values are found, the duplicate is recorded.
+5. The search stops after finding the first duplicate.
+
+## 10. Singly Linked List — `LinkedList.cpp`
+
+1. Nodes are created with data and a next pointer.
+2. The user selects an operation from the menu.
+3. Nodes can be inserted at the front, back, or a position.
+4. Nodes can be removed from the front or back.
+5. The list can be searched, counted, deleted, and printed.
+
+## 11. Stack Using an Array — `StackArray.cpp`
+
+1. The initial stack values are stored in an array.
+2. The array represents the stack.
+3. A push operation adds a value at the end.
+4. A pop operation removes the last value.
+5. The result follows the LIFO rule.
+
+## 12. Stack Using a Linked List — `StackLL.cpp`
+
+1. Nodes are created for stack values.
+2. New values are added at the tail.
+3. The tail acts as the top of the stack.
+4. The last node is located and removed during pop.
+5. The stack is printed before and after removal.
+
+## 13. Queue Using an Array — `QueueArray.cpp`
+
+1. Initial values are stored in an array.
+2. A new value is inserted at the rear.
+3. The front value is removed during dequeue.
+4. Remaining elements are shifted toward the front.
+5. The queue contents are printed.
+
+## 14. Queue Using a Linked List — `QueueLL.cpp`
+
+1. The queue maintains head and tail pointers.
+2. New nodes are added at the tail.
+3. The node at the head is removed first.
+4. This maintains FIFO order.
+5. The queue is printed after operations.
+
+## 15. Circular Queue — `CircularQueue.cpp`
+
+1. The queue stores capacity, size, front, and rear indexes.
+2. The rear moves using `(rear + 1) % capacity` during insertion.
+3. The front moves using the same circular formula during deletion.
+4. The indexes wrap from the last position to the first.
+5. The queue reuses previously freed positions.
+
+## 16. Doubly Linked List — `DoublyLL.cpp`
+
+1. Each node stores data, next, and previous pointers.
+2. Nodes can be inserted at the front or back.
+3. A node can be inserted at a selected position.
+4. Nodes can be removed from either end.
+5. The list is traversed and printed from head to tail.
+
+## 17. Queue Using a Doubly Linked List — `QueueDLL.cpp`
+
+1. New nodes are inserted at the head.
+2. The oldest node moves toward the tail.
+3. Dequeue removes the tail node.
+4. Removing from the opposite end preserves FIFO order.
+5. The list is printed after enqueue and dequeue operations.
+
+## 18. Stack Using a Doubly Linked List — `StackDLL.cpp`
+
+1. The head is used as the stack top.
+2. Push inserts a node at the head.
+3. Pop removes the node at the head.
+4. The most recently inserted value is removed first.
+5. The result follows the LIFO rule.
+
+## 19. Tower of Hanoi — `TOH.cpp`
+
+1. The number of disks and three rods are defined.
+2. The recursive function handles the one-disk base case.
+3. It moves `n - 1` disks to the helper rod.
+4. It moves the largest disk to the destination rod.
+5. It moves the remaining disks from the helper rod to the destination.
+6. Every move is printed.
+
+## 20. Merge Two Sorted Arrays — `MergeSortedArray.cpp`
+
+1. Two sorted arrays are entered.
+2. Two indexes point to their current elements.
+3. The smaller current element is copied to a third array.
+4. The corresponding index is advanced.
+5. Remaining elements are copied after one array ends.
+6. The merged sorted array is printed.
+
+## 21. Merge Sort Using an Array — `MergeSorting.cpp`
+
+1. Array values are entered.
+2. The array is divided into smaller halves recursively.
+3. Division continues until subarrays contain one element.
+4. Two sorted halves are merged into a temporary array.
+5. The merged values are copied back.
+6. The complete sorted array is displayed.
+
+## 22. Merge Sort Using a Linked List — `MergeSortLL.cpp`
+
+1. Values are inserted into a linked list.
+2. Slow and fast pointers locate the middle node.
+3. The list is divided into two parts.
+4. Both parts are recursively sorted.
+5. The sorted parts are merged.
+6. The final linked list is printed.
+
+## 23. Radix Sort Using Linked Buckets — `RedixSort.cpp`
+
+1. Values are stored in a linked list.
+2. The current digit position is selected.
+3. Each value is placed into bucket `0` through `9` based on that digit.
+4. Buckets are joined from `0` to `9`.
+5. The next digit position is processed.
+6. The process continues until all digits are handled.
+
+## 24. Bucket Sort — `BucketSort.cpp`
+
+1. The maximum array value is found.
+2. Ten linked-list buckets are created.
+3. Each value is assigned to a bucket using its scaled value.
+4. Every bucket is sorted individually.
+5. Bucket values are copied back into the array in order.
+6. The sorted array is displayed.
+
+## 25. Bin Sort — `BinSort.cpp`
+
+1. The maximum value is found.
+2. One linked-list bin is created for every value from zero to the maximum.
+3. Each array value is inserted into the bin with the same index.
+4. The bins are visited from smallest to largest index.
+5. Their values are copied back into the array.
+6. The final array is sorted.
+
+## 26. Linear Queue — `Queue.cpp`
+
+1. A fixed-capacity queue is initialized.
+2. `front` and `rear` are set to `-1`.
+3. `enQueue` adds values at the rear.
+4. `deQueue` removes values from the front.
+5. `peek` reads the front value without removing it.
+6. `isEmpty` checks whether the queue contains no elements.
+
+## 27. Binary Tree — `BinaryTree.cpp`
+
+1. The tree is constructed from preorder-style data.
+2. A value of `-1` represents a missing node.
+3. Inorder, preorder, and postorder traversals visit the tree recursively.
+4. Level-order traversal uses a queue.
+5. Height, node count, sum, and diameter are calculated.
+
+## 28. Binary Search Tree — `BST.cpp`
+
+1. A value is compared with the current node.
+2. Smaller values move to the left subtree.
+3. Larger values move to the right subtree.
+4. Search follows the same comparison rule.
+5. Inorder traversal prints values in sorted order.
+6. Deletion uses the inorder successor when a node has two children.
+
+## 29. AVL Tree — `AVLTrees.cpp`
+
+1. Values are inserted using the BST rule.
+2. The balance factor of each node is calculated.
+3. An imbalance is detected when the factor is less than `-1` or greater than `1`.
+4. LL, RR, LR, or RL rotations are selected.
+5. Rotations restore the height balance.
+6. Search, insertion, and deletion continue on the balanced tree.
+
+## 30. Heap Sort Using an Array — `HeapSortArray.cpp`
+
+1. Array values are arranged into a max heap.
+2. The largest value is stored at index `0`.
+3. The root is swapped with the last unsorted element.
+4. The heap size is reduced by one.
+5. `maxHeapify` restores the heap.
+6. The process repeats until the array is sorted in ascending order.
+
+## 31. Heap Sort Using Linked Nodes — `HeapSortLL.cpp`
+
+1. Values are inserted level by level into linked nodes.
+2. `buildHeap` creates a max heap.
+3. The root contains the largest value.
+4. The root is swapped with the last node's value.
+5. The last node is detached and deleted.
+6. `maxHeapify` repairs the remaining tree.
+7. The process repeats until one node remains.
+8. The current code deletes completed values instead of saving them, so the final traversal prints only the remaining node.
+
 ---
 
 # Detailed Explanation: Unsorted Array ADT
@@ -541,15 +1036,6 @@ Only the first occurrence is deleted. Searching takes **O(n)**, and shifting can
 
 The array itself requires **O(n)** storage for its active elements.
 
-## Important limitations in the current implementation
 
-- `int arr[n]` is a variable-length array. Variable-length arrays are not part of standard C++; some compilers accept them as an extension, but portable C++ should use a fixed-size array or `std::vector<int>`.
-- The array has no spare capacity. Any insertion writes beyond the allocated array, causing undefined behavior.
-- The program does not validate that `pos` is within the valid insertion range `0` through `n`.
-- The program does not validate the menu choice or input failures.
-- The function performs only one selected operation and then returns; it is not a repeating interactive menu.
-- Because the array is unsorted, deletion must search linearly. A sorted array could support faster searches, but insertion would still require shifting and preserving order.
 
-## Safer design direction
 
-For a production-quality version, use `std::vector<int>` and check capacity and position before modifying it. `vector::insert` and `vector::erase` express the same operations clearly, while still demonstrating the same underlying shifting costs. If the goal is to practice manual array manipulation, keep the loops but allocate a fixed capacity larger than the initial size and track both `size` and `capacity` separately.
