@@ -18,12 +18,20 @@ void printArr(int arr[], int n){
     }
 }
 
-void push_back(int arr[], int &n, int value){
+void push_back(int arr[], int &n, int value, int capacity){
+    if(n==capacity){
+        cout<<"Queue is full"<<endl;
+        return;
+    }
     arr[n]=value;
     n++;
 }
 
 void pop_front(int arr[], int &n){
+    if (n==0){
+        cout<<"Queue is empty"<<endl;
+        return;
+    }
     for (int i=0; i<n-1; i++){
         arr[i]=arr[i+1];
     }
@@ -33,7 +41,8 @@ void pop_front(int arr[], int &n){
 int main() {
     // Your code goes here
     int size=5;
-    int arr[5];
+    int capacity=10;
+    int arr[capacity];
     createArr(arr, size);
     printArr(arr, size);
     cout<<endl;
@@ -46,7 +55,7 @@ int main() {
     switch(i){
         case 1: cout<<"Enter the value you want to insert: ";
                 cin>>value;
-                push_back(arr, size, value);
+                push_back(arr, size, value, capacity);
                 printArr(arr, size);
                 break;
         
